@@ -1,8 +1,23 @@
+# Set theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 # Set local customizations folder
 ZSH_CUSTOM=${0:a:h}/custom
 
-# Lazy load nvm to speed up zsh startup
-zstyle ':omz:plugins:nvm' lazy yes
+# Let NVM automatically load versions in .nvmrc
+NVM_AUTOLOAD=1
 
-# Automatically run nvm use when you change to directories with a .nvmrc file
-zstyle ':omz:plugins:nvm' autoload true
+# Load plugins
+plugins=(
+    git
+    z
+    zsh-syntax-highlighting
+    last-working-dir
+    zsh-autosuggestions
+    zsh-completions
+    npm
+    virtualenv
+    copypath
+    dirhistory
+    nvm
+)
