@@ -8,3 +8,6 @@ alias npmbb='npm ci && npm run build'
 alias npml='npm run lint'
 alias npmtc='npm run test:coverage'
 alias npmtw='npm run test:watch'
+
+alias vtu='npx vitest --project unit --inspect-brk --no-file-parallelism \
+           --max-workers=1 --testTimeout=30000'
